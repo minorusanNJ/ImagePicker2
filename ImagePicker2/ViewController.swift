@@ -26,24 +26,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!
     ]
     
+/*
+    // move out to outside file
     struct myMeme {
         var topText: String
         var bottomText: String
         let originalImage: UIImage
         let mymemeImage: UIImage
     }
+ */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+/*
+// chaned to function: setupTextField
         top.defaultTextAttributes = myTextAttributes
         bottom.defaultTextAttributes = myTextAttributes
         top.text = "TOP"
         bottom.text = "BOTTOM"
+*/
+        setupTextField(top, text: "TOP")
+        setupTextField(bottom, text: "BOTTOM")
+
         share.isEnabled = false
         
         self.top.delegate = self
         self.bottom.delegate = self
+    }
+    
+    func setupTextField(_ textField: UITextField, text: String){
+        textField.defaultTextAttributes = myTextAttributes
+        textField.text = text
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,18 +84,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
 
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
+/*
+// Replaced with func presentPickerViewController()
+         
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
-        share.isEnabled = true
         present(imagePicker, animated: true, completion: nil)
+*/
+        presentPickerViewController(source: .camera)
+        share.isEnabled = true
     }
     
     @IBAction func pickAnImageFromPhotoLibrary(_ sender: Any) {
+/*
+// Replaced with func presentPickerViewController()
+         
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+ */
+        presentPickerViewController(source: .photoLibrary)
         share.isEnabled = true
+    }
+    
+    func presentPickerViewController(source: UIImagePickerController.SourceType) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = source
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -158,8 +189,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     @IBAction func cancelAction(_ sender: Any) {
         share.isEnabled = false
         imagePickerView.image = nil
-        top.text = "TOP"
-        bottom.text = "BOTTOM"
+
+// replace with function: setupTextField()
+//        top.text = "TOP"
+//        bottom.text = "BOTTOM"
+        
+        setupTextField(top, text: "TOP")
+        setupTextField(bottom, text: "BOTTOM")
+
     }
     
     

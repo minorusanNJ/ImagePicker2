@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920EEE4525FBE86C00D3B55F /* MyMemeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EEE4425FBE86C00D3B55F /* MyMemeStruct.swift */; };
 		92336CCB25FB0E8C00E4EED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92336CCA25FB0E8C00E4EED9 /* AppDelegate.swift */; };
 		92336CCD25FB0E8C00E4EED9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92336CCC25FB0E8C00E4EED9 /* SceneDelegate.swift */; };
 		92336CCF25FB0E8C00E4EED9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92336CCE25FB0E8C00E4EED9 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		920EEE4425FBE86C00D3B55F /* MyMemeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMemeStruct.swift; sourceTree = "<group>"; };
 		92336CC725FB0E8C00E4EED9 /* ImagePicker2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePicker2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92336CCA25FB0E8C00E4EED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92336CCC25FB0E8C00E4EED9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				92336CD325FB0E8D00E4EED9 /* Assets.xcassets */,
 				92336CD525FB0E8D00E4EED9 /* LaunchScreen.storyboard */,
 				92336CD825FB0E8D00E4EED9 /* Info.plist */,
+				920EEE4425FBE86C00D3B55F /* MyMemeStruct.swift */,
 			);
 			path = ImagePicker2;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920EEE4525FBE86C00D3B55F /* MyMemeStruct.swift in Sources */,
 				92336CCF25FB0E8C00E4EED9 /* ViewController.swift in Sources */,
 				92336CCB25FB0E8C00E4EED9 /* AppDelegate.swift in Sources */,
 				92336CCD25FB0E8C00E4EED9 /* SceneDelegate.swift in Sources */,
